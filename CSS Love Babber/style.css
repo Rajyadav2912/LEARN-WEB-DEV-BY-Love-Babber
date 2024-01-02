@@ -1,0 +1,25 @@
+.box1 {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  background-image: linear-gradient(orange, blue);
+  background-image: linear-gradient(to bottom, red, blue);
+  background-image: linear-gradient(to bottom, orange, white, green);
+}
+
+.box2 {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  background-image: radial-gradient(circle, yellow 10%, orange 50%);
+}
+
+.box3 {
+  border: 1px solid black;
+  width: 200px;   
+  height: 200px;
+  margin: 50px;
+  background-image: conic-gradient(orange, white, green);
+}

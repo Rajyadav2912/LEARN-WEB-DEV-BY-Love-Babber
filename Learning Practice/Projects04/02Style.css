@@ -1,0 +1,17 @@
+/* External CSS */
+
+/* Element selector  */
+p {
+  color: white;
+}
+
+/* Id Selector */
+#article1 {
+  background-color: black;
+  color: white;
+}
+/* Class Selector */
+.paraclass {
+  color: yellow;
+  background-color: black;
+}

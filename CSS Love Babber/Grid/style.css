@@ -1,0 +1,68 @@
+.container {
+  width: 1000px;
+  height: 700px;
+  background-color: yellow;
+  border: 1px solid black;
+  display: grid;
+  /* grid-template-rows: repeat(3, 0.5fr);
+  grid-template-columns: repeat(3, 0.5fr);
+  grid-gap: 15px; */
+
+  grid-template-columns: 300px 350px 300px;
+  grid-template-rows: 100px 200px 200px;
+  grid-template-areas:
+    "hd hd hd"
+    "sd main main"
+    "ft ft ft";
+  grid-gap: 10px;
+  padding: 10px;
+  overflow-x: auto;
+  overflow: auto;
+}
+
+.box {
+  /* width: 100px; */
+  /* height: 100px; */
+  background-color: red;
+  border: 1px solid black;
+}
+
+#header {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  grid-area: hd;
+}
+
+#main {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  grid-area: main;
+}
+
+#side {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  grid-area: sd;
+}
+
+#footer {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  grid-area: ft;
+}
+
+/* #box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  /* grid-row-start: 1;
+  grid-row-end: 3; 
+} */
+
+/* #box3 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+} */

@@ -1,0 +1,63 @@
+.container {
+  width: 350px;
+  height: 350px;
+  margin: 50px;
+  padding: 20px 10px 0 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(61, 61, 61);
+  border: 1px solid black;
+}
+
+.container:hover {
+  border: none;
+  box-shadow: 0 0 10px rgb(61, 61, 61);
+}
+
+.container img {
+  width: 21rem;
+  height: 12rem;
+  border-radius: 10px;
+}
+
+p {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+hr {
+  width: 75%;
+  float: left;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+}
+
+.Price {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+.Price #price {
+  color: rgb(102, 116, 204);
+  line-height: 24px;
+  margin-right: 8px;
+}
+
+.Price #realprice {
+  margin-right: 8px;
+  color: rgb(119, 124, 133);
+  text-decoration: line-through;
+}
+
+.Price #offer {
+  background-color: #1dd1a1;
+  border-radius: 3px;
+  padding: 4px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+}
