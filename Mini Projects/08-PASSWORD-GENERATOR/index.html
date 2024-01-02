@@ -7,24 +7,31 @@
     <title>Password-Generator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
+    <!--=======Container========================================Container=======================================Container==========================================================-->
     <div class="container">
         <h1>Password Generator</h1>
 
+        <!--=======display-container========================================display-container=======================================display-container===============================-->
         <div class="display-container">
             <!-- Password Display -->
             <input readonly placeholder="Password" class="display" data-passwordDisplay>
 
             <!-- Copy password button -->
-            <button data-copy>
+            <button class="copybtn" data-copy>
                 <!-- Copy password button -->
-                <span data-copyMsg></span>
+                <span class="tooltip" data-copyMsg></span>
                 <img src="./images/copy.svg" alt="copy" width="23" height="23">
             </button>
         </div>
 
+        <!--=======input-container-========================================input-container=======================================input-container=======================================-->
         <div class="input-container">
             <div class="length-container">
                 <!-- pass word lenght -->
@@ -36,22 +43,22 @@
             <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
 
             <!-- CheckBox -->
-            <div>
+            <div class="check">
                 <input type="checkbox" id="uppercase">
                 <label for="uppercase">Includes Uppercase Letters</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="lowercase">
                 <label for="lowercase">Includes LowerCase Letters</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="numbers">
                 <label for="numbers">Include Number Letters</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="symbols">
                 <label for="symbols">Includes Symbols</label>
             </div>
@@ -59,9 +66,10 @@
             <!-- strength section -->
             <div class="strength-container">
                 <p>Strength</p>
-                <div data-indicator></div>
+                <div class="indicator" data-indicator></div>
             </div>
 
+            <!--=======generateButton-========================================generateButton=======================================generateButton=======================================-->
             <!-- genrate password-->
             <button class="generateButton">Generate Password</button>
         </div>
