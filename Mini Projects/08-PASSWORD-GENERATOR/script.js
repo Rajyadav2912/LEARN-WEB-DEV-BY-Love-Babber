@@ -1,5 +1,5 @@
-// fetch all id, class , input element fetch to in store in variable
-// coustum attribute fetch
+// fetch all id, class , input element fetch to in store in variable=======================================================================================================================
+// coustum attribute fetch=================================================================================================================================================================
 const inputSlider = document.querySelector("[data-lengthSlider]");
 const lengthDisplay = document.querySelector("[data-lenghtNumber]");
 
@@ -11,14 +11,14 @@ const lowercaseCheckbox = document.querySelector("#lowercase");
 const numberCheckbox = document.querySelector("#numbers");
 const symbolsCheckbox = document.querySelector("#symbols");
 
-const indicator = document.querySelector("[data-indicator]");
+const indicator = document.querySelector("[data-indicator]"); 
 const generatorBtn = document.querySelector(".generateButton");
 
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 
 const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>/.?';
 
-// initially need
+// initially need=========================================================================================================================================================================
 
 let password = "";
 let passwordLength = 10;
@@ -26,9 +26,9 @@ let passwordLength = 10;
 let checkCount = 0;
 handleSlider();
 
-// set circle color grey
+// set circle color grey==================================================================================================================================================================
 
-// set [password length]
+// set [password length]==================================================================================================================================================================
 
 function handleSlider() {
   inputSlider.value = passwordLength;
@@ -51,7 +51,7 @@ setIndicator("#ccc");
 
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
-}
+} 
 
 function generateRandomNumber() {
   return getRandomInteger(0, 9);
@@ -94,17 +94,17 @@ function calcStrength() {
   }
 }
 
-//==================================================================================================================
+//=================================================================================================================================================================================
 
 async function copyContent() {
   try {
-    // clipboard pe write kre ga and promise (reslove , return) return krega
+    // clipboard pe write kre ga and promise (reslove , return) return krega=======================================================================================================
     await navigator.clipboard.writeText(passwordDisplay.value);
     copyMsg.innerText = "copied";
   } catch (e) {
     copyMsg.innerText = "Failed";
   }
-  //   to make copy wala span visible
+  //   to make copy wala span visible==============================================================================================================================================
   copyMsg.classList.add("active");
 
   setTimeout(() => {
@@ -113,12 +113,12 @@ async function copyContent() {
 }
 
 function shufflePassword(array) {
-  // fisher yates methods Algorithm
+  // fisher yates methods Algorithm================================================================================================================================================
 
   for (let i = array.length - 1; i > 0; i--) {
-    // random J, find out using random function
+    // random J, find out using random function====================================================================================================================================
     const j = Math.floor(Math.random() * (i + 1));
-    // swap number at i index and j index
+    // swap number at i index and j index==========================================================================================================================================
     const temp = array[i];
     array[i] = array[j];
     array[j] = temp;
@@ -129,7 +129,7 @@ function shufflePassword(array) {
 }
 
 function handleCheckBoxChange() {
-  // kisi bhi check box ko tick or untick kre uske basess pe waps se count krega
+  // kisi bhi check box ko tick or untick kre uske basess pe waps se count krega==================================================================================================
   checkCount = 0;
   allCheckBox.forEach((checkbox) => {
     if (checkbox.checked) {
@@ -137,7 +137,7 @@ function handleCheckBoxChange() {
     }
   });
 
-  // special condition
+  // special condition============================================================================================================================================================
   if (passwordLength < checkCount) {
     passwordLength = checkCount;
     handleSlider();
@@ -160,7 +160,7 @@ copyBtn.addEventListener("click", () => {
 });
 
 generatorBtn.addEventListener("click", () => {
-  //  none of the check box are selected
+  //  none of the check box are selected=========================================================================================================================================
   if (checkCount <= 0) {
     return;
   }
@@ -169,9 +169,9 @@ generatorBtn.addEventListener("click", () => {
     handleSlider();
   }
 
-  //   let's start the journey to find new password
+  //   let's start the journey to find new password===================================================
 
-  // remove old password
+  // remove old password=======================================================================================
   password = "";
 
   //   let's put the stuff mentioned by checkboxes
