@@ -11,7 +11,7 @@ const lowercaseCheckbox = document.querySelector("#lowercase");
 const numberCheckbox = document.querySelector("#numbers");
 const symbolsCheckbox = document.querySelector("#symbols");
 
-const indicator = document.querySelector("[data-indicator]"); 
+const indicator = document.querySelector("[data-indicator]");
 const generatorBtn = document.querySelector(".generateButton");
 
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
@@ -51,7 +51,7 @@ setIndicator("#ccc");
 
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
-} 
+}
 
 function generateRandomNumber() {
   return getRandomInteger(0, 9);
@@ -117,6 +117,7 @@ function shufflePassword(array) {
 
   for (let i = array.length - 1; i > 0; i--) {
     // random J, find out using random function====================================================================================================================================
+
     const j = Math.floor(Math.random() * (i + 1));
     // swap number at i index and j index==========================================================================================================================================
     const temp = array[i];
