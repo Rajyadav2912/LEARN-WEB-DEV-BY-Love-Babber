@@ -9,11 +9,89 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
-    <script src="script.js"></script>
+    <div class="wrapper">
+        <!-- Heading -->
+        <h1>Weather APP</h1>
+
+        <!-- location button & Search bar -->
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-SearchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+            <!-- Grant Location container -->
+            <div class="grant-location-container">
+                <img src="./Images/location.png" width="80" height="80" loading="lazy" alt="loaction.png">
+                <p>Allow Access to get weather Infomation</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+            <!-- Search Weather form -->
+            <form class="from-container" data-searchform>
+                <input placeholder="Search for city....." data-searchInput>
+
+                <button class="btn">
+                    <img src="./Images/search.png" width="20" height="20" loading="lazy" alt="search.png">
+                </button>
+            </form>
+
+            <!-- loading screen container -->
+            <div class="loading-container">
+                <img src="./Images/loading.gif" width="150" height="150" alt="loading">
+                <p>Loading</p>
+            </div>
+
+            <!-- Show Weather information-->
+            <div class="user-info-container">
+
+                <!-- city name and flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <!-- weather description -->
+                <p data-weatherDesc></p>
+
+                <!-- weather Icon -->
+                <img data-weatherIcon>
+
+                <!-- temperature -->
+                <p data-temp></p>
+
+                <!-- 3 card - parameters -->
+                <div class="parameter-container">
+
+                    <!-- card 1 -->
+                    <div class="parameter">
+                        <img src="./Images/wind.png" alt="wind.png">
+                        <p>Windspeed</p>
+                        <p data-windspeed></p>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="parameter">
+                        <img src="./Images/humidity.png" alt="humidity.png">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!-- card 1 -->
+                    <div class="parameter">
+                        <img src="./Images/cloud.png" alt="cloud.png">
+                        <p>Cloud</p>
+                        <p data-cloudiness></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
 </body>
 
 </html>
