@@ -20,6 +20,7 @@ const userInfoContainer = document.querySelector(".user-info-container");
 let oldTab = userTab;
 const API_Key = "fecda54247e6eb3c2d7d5a30771b277e";
 oldTab.classList.add(".current-tab");
+getformSesstionStorage();
 
 // ek kaam or pending hai ??
 
@@ -59,6 +60,7 @@ searchTab.addEventListener("click", () => {
 });
 
 // check if coordinates are already present in session storage
+
 function getformSesstionStorage() {
   const localCoordinates = sessionStorage.getItem("user-coordinates");
   if (!localCoordinates) {
@@ -137,3 +139,34 @@ function showPosition(position) {
 
 const grantAccessButton = document.querySelector("[data-grantAccess]");
 grantAccessButton.addEventListener("click", getLocation);
+
+const searchInput = document.querySelector("[data-searchInput]");
+
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let cityName = searchInput.value;
+
+  if (cityName === "") {
+    return;
+  } else {
+    fetch_SearchWeatherInfo(cityName);
+  }
+});
+
+async function fetch_SearchWeatherInfo(city) {
+  loadingScreen.classList.add("active");
+  userInfoContainer.classList.remove("active");
+  grantAccessContainer.classList.remove("active");
+
+  try {
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}&units=metric`
+    );
+    const data = await response.json();
+    loadingScreen.classList.remove("active");
+    userInfoContainer.classList.add("active");
+    renderWeatherInfo(data);
+  } catch (err) {
+    // HW
+  }
+}
