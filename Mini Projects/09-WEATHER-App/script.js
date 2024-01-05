@@ -23,5 +23,33 @@ currentTab.classList.add(".current-tab");
 
 // ek kaam or pending hai ??
 
+// switch tab function when user stand in user tab then after he clicked on search tab
 
+function switchTab(clickedTab) {
+  if (clickedTab != currentTab) {
+    currentTab.classList.remove("current-tab");
+    currentTab = clickedTab;
+    currentTab.classList.add("current-tab");
 
+    if (searchForm.classList.contains("active")) {
+      userInfoContainer.classList.remove("active");
+      grantAccessContainer.classList.remove("active");
+      searchForm.classList.add("active");
+    } else {
+      // main phele search wale tab pr tha, ab your weather tab visible krna hn
+      searchForm.classList.remove("active");
+      userInfoContainer.classList.remove("active");
+      getformSesstionStorage();
+    }
+  }
+}
+
+userTab.addEventListener("click", () => {
+  // pass clicked tab as input parameter
+  switchTab(userTab);
+});
+
+searchTab.addEventListener("click", () => {
+  // pass clicked tab as input parameter
+  switchTab(searchTab);
+});
