@@ -10,6 +10,11 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
@@ -26,8 +31,9 @@
 
         <div class="weather-container">
             <!-- Grant Location container -->
-            <div class="grant-location-container">
+            <div class="sub-container grant-location-container">
                 <img src="./Images/location.png" width="80" height="80" loading="lazy" alt="loaction.png">
+                <p>Grant Location Access</p>
                 <p>Allow Access to get weather Infomation</p>
                 <button class="btn" data-grantAccess>Grant Access</button>
             </div>
@@ -42,7 +48,7 @@
             </form>
 
             <!-- loading screen container -->
-            <div class="loading-container">
+            <div class="sub-container loading-container">
                 <img src="./Images/loading.gif" width="150" height="150" alt="loading">
                 <p>Loading</p>
             </div>
