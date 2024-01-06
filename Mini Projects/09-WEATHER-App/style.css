@@ -53,10 +53,6 @@ h1 {
 }
 
 .weather-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   margin-block: 4rem;
 }
 
@@ -72,13 +68,13 @@ h1 {
 }
 
 .sub-container {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
 
 .grant-location-container.active {
-  display: none;
+  display: flex;
 }
 
 .grant-location-container img {
@@ -115,7 +111,7 @@ h1 {
 
 /* User Container Start */
 .user-info-container {
-  /* display: none; */
+  display: none;
 }
 
 .user-info-container.active {
@@ -172,6 +168,7 @@ h1 {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 5px 0;
   align-items: center;
 }
@@ -197,8 +194,10 @@ h1 {
   width: 90%;
   max-width: 550px;
   margin: 0 auto;
+  margin-bottom: 3rem;
   justify-content: center;
   align-items: center;
+  gap: 0 10px;
   /* display: flex; */
 }
 
