@@ -137,13 +137,13 @@ function renderWeatherInfo(weatherInfo) {
 
   weatherIcon.src = `https://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
 
-  temp.innerText = weatherInfo?.main?.temp;
+  temp.innerText = `${weatherInfo?.main?.temp} °C`;
 
-  windspeed.innerText = weatherInfo?.wind?.speed;
+  windspeed.innerText = `${weatherInfo?.wind?.speed} m/s`;
 
-  humidity.innerText = weatherInfo?.main?.humidity;
+  humidity.innerText = `${weatherInfo?.main?.humidity} %`;
 
-  cloudiness.innerText = weatherInfo?.clouds?.all;
+  cloudiness.innerText = `${weatherInfo?.clouds?.all} %`;
 }
 
 const grantAccessButton = document.querySelector("[data-grantAccess]");
@@ -161,8 +161,8 @@ function getLocation() {
 
 function showPosition(position) {
   const userCoordinates = {
-    lat: position.coordinates.latitude,
-    lon: position.coordinates.longitude,
+    lat: position.coords.latitude,
+    lon: position.coords.longitude,
   };
   //
   sessionStorage.setItem("user-coordinates", JSON.stringify(userCoordinates));
@@ -183,17 +183,20 @@ searchForm.addEventListener("submit", (e) => {
     return;
   } else {
     fetch_SearchWeatherInfo(cityName);
+    cityName = "";
   }
 });
 
 async function fetch_SearchWeatherInfo(city) {
   loadingScreen.classList.add("active");
+
   userInfoContainer.classList.remove("active");
+
   grantAccessContainer.classList.remove("active");
 
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
     );
     const data = await response.json();
     loadingScreen.classList.remove("active");
