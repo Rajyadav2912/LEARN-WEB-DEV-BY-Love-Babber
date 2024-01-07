@@ -7,6 +7,7 @@
   font-family: "Merriweather Sans", sans-serif;
 }
 
+/* Root items start */
 :root {
   --colorDark1: #112d4e;
   --colorDark2: #3f72af;
@@ -14,6 +15,9 @@
   --colorLight2: #f9f7f7;
 }
 
+/* Root items End */
+
+/* Body */
 .wrapper {
   width: 100vw;
   height: 100vh;
@@ -39,6 +43,7 @@ h1 {
   /* border: 1px solid black; */
 }
 
+/* show a tab Your location & Search weather tab */
 .tab {
   cursor: pointer;
   font-size: 0.875rem;
@@ -56,6 +61,7 @@ h1 {
   margin-block: 4rem;
 }
 
+/* Button's */
 .btn {
   all: unset;
   font-size: 0.85rem;
@@ -73,6 +79,7 @@ h1 {
   align-items: center;
 }
 
+/* grant location access */
 .grant-location-container.active {
   display: flex;
 }
@@ -129,12 +136,12 @@ h1 {
 }
 
 .user-info-container p {
-  font-size: 2.75rem;
+  font-size: 2rem;
   font-weight: 700;
 }
-
 /* User Container End */
 
+/* show a name's : city , Temp , flag icon , description */
 .name {
   display: flex;
   align-items: center;
@@ -152,14 +159,17 @@ h1 {
   object-fit: contain;
 }
 
+/* bottom three box's */
 .parameter-container {
+  width: 90%;
   display: flex;
   gap: 10px 20px;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin: 1.6rem auto 0;
 }
 
+/* Wind speed , Humidity , Cloudiness */
 .parameter {
   width: 30%;
   max-width: 200px;
@@ -189,6 +199,7 @@ h1 {
   font-weight: 200;
 }
 
+/* Search Bar form */
 .form-container {
   display: none;
   width: 90%;
