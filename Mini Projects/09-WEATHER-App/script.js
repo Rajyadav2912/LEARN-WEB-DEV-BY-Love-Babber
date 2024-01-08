@@ -16,6 +16,12 @@ const searchForm = document.querySelector("[data-searchform]");
 const loadingScreen = document.querySelector(".loading-container");
 const userInfoContainer = document.querySelector(".user-info-container");
 
+// Error Handling Variable 404 Error
+const notFound = document.querySelector(".errorContainer");
+const errorBtn = document.querySelector("[data-errorButton]");
+const errorText = document.querySelector("[data-errorText]");
+const errorImage = document.querySelector("[data-errorImg]");
+
 // initially variable needs??
 /* 
 1. API Key 
@@ -112,6 +118,11 @@ async function fetch_UserWeatherInfo(coordinates) {
   } catch (err) {
     loadingScreen.classList.remove("active");
     // Home work
+    notFound.classList.add("active");
+    errorImage.style.display = "none";
+    errorText.innerText = `Error: ${err?.message}`;
+    errorBtn.style.display = "block";
+    errorBtn.addEventListener("click", fetch_UserWeatherInfo);
   }
 }
 
@@ -194,6 +205,8 @@ async function fetch_SearchWeatherInfo(city) {
 
   grantAccessContainer.classList.remove("active");
 
+  notFound.classList.remove("active");
+
   try {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
@@ -204,8 +217,11 @@ async function fetch_SearchWeatherInfo(city) {
     renderWeatherInfo(data);
   } catch (err) {
     // HW
-
     loadingScreen.classList.remove("active");
     userInfoContainer.classList.remove("active");
+
+    notFound.classList.add("active");
+    errorText.innerText = `${err?.message}`;
+    errorBtn.style.display = "none";
   }
 }
