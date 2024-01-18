@@ -1,7 +1,4 @@
 .Item {
   text-align: center;
-}
-
-.span {
-  margin-left: 5px;
+  background-color: orange;
 }
