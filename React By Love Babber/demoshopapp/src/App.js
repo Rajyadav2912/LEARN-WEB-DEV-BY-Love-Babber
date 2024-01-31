@@ -15,7 +15,7 @@ function App() {
   // How to access values approach - 2
   const response = [
     {
-      itemName: "Nirma1",
+      itemName: "Rajyadav1",
       itemDate: "201",
       itemMonth: "Jan",
       itemyear: "1999",
@@ -35,26 +35,28 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      Hello World
-      <Item Name={response[0].itemName}></Item>
-      <ItemDate
-        date={response[0].itemDate}
-        month={response[0].itemMonth}
-        year={response[0].itemyear}
-      ></ItemDate>
-      <Item Name={response[1].itemName}></Item>
-      <ItemDate
-        date={response[1].itemDate}
-        month={response[1].itemMonth}
-        year={response[1].itemyear}
-      ></ItemDate>
-      <Item Name={response[2].itemName}></Item>
-      <ItemDate
-        date={response[2].itemDate}
-        month={response[2].itemMonth}
-        year={response[2].itemyear}
-      ></ItemDate>
+    <div>
+      <div className="App">
+        Hello World
+        <Item Name={response[0].itemName}></Item>
+        <ItemDate
+          date={response[0].itemDate}
+          month={response[0].itemMonth}
+          year={response[0].itemyear}
+        ></ItemDate>
+        <Item Name={response[1].itemName}></Item>
+        <ItemDate
+          date={response[1].itemDate}
+          month={response[1].itemMonth}
+          year={response[1].itemyear}
+        ></ItemDate>
+        <Item Name={response[2].itemName}></Item>
+        <ItemDate
+          date={response[2].itemDate}
+          month={response[2].itemMonth}
+          year={response[2].itemyear}
+        ></ItemDate>
+      </div>
     </div>
   );
 }
