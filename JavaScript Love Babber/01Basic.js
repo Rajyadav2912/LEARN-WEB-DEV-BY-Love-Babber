@@ -14,12 +14,13 @@
 //   let b = 2;
 //   console.log(a + b);
 // }
-// // console.log(a + b); // not Provide ans
+// console.log(a + b); // not Provide ans
 
 // {
-// // const variable ko bs { } yee block of code me hi use kr skte hn
+//   // const variable ko bs { } yee block of code me hi use kr skte hn
 //   const a = 5;
-//   const b = 5;
+//   const b = "5";
+
 //   console.log(a + b);
 // }
 

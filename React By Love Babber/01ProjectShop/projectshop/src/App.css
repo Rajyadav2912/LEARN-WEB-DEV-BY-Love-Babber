@@ -1,25 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .App {
   text-align: center;
-  width: 100%;
-  height: 100vh;
-  padding-top: 5rem;
-  font-size: 5rem;
-  background-color: #61dafb;
-}
-
-.container {
-  margin: 3rem auto;
-  width: 30%;
-  height: 40rem;
-  background-color: yellow;
-  border-radius: 2rem;
-  border: 1px solid black;
 }
 
 .App-logo {
