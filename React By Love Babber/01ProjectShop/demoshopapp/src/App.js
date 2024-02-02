@@ -1,7 +1,6 @@
 import "./App.css";
 import Item from "./components/Item";
 import ItemDate from "./components/ItemDate";
-import Products from "./DemoProject/Products";
 
 function App() {
   const response = [
@@ -33,7 +32,8 @@ function App() {
 
   return (
     <div className="App">
-      <Products Item={response}></Products>
+      <Item ItemName="Nirma"></Item>
+      <ItemDate date="20" month="january" year="2001"></ItemDate>
     </div>
   );
 }
@@ -42,13 +42,13 @@ export default App;
 
 /* function App() {
 //   // How to access values approach - 1
-//   // return (
-//   //   <div className="App">
-//   //     Hello World
-//   //     <Item ItemName="Nirma"></Item>
-//   //     <ItemDate date="20" month="january" year="2001"></ItemDate>
-//   //   </div>
-//   // );
+  // return (
+  //   <div className="App">
+  //     Hello World
+  //     <Item ItemName="Nirma"></Item>
+  //     <ItemDate date="20" month="january" year="2001"></ItemDate>
+  //   </div>
+  // );
 
 //   // How to access values approach - 2
 //   const response = [

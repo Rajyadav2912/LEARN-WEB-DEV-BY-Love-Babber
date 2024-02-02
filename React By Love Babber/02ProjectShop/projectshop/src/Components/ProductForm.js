@@ -48,7 +48,7 @@ function ProductForm(props) {
             onChange={dateChangeHandler}
             value={newDate}
             min="2024-01-01"
-            max="2024-12-12"
+            max="2024-12-31"
           ></input>
         </div>
         <div className="new-product_button">
