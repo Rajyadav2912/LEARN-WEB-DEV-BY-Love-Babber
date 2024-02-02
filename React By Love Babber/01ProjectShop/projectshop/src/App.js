@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Product from "./Components/Products";
+import NewProduct from "./Components/NewProduct";
 
 const App = () => {
   const products = [
@@ -30,8 +31,14 @@ const App = () => {
     },
   ];
 
+  function printProductData(data) {
+    console.log("i am inside APP.js");
+    console.log(data);
+  }
+
   return (
     <div className="App">
+      <NewProduct createNewProduct={printProductData} />
       <Product items={products} />
       {/* <Product items={products} /> */}
     </div>
