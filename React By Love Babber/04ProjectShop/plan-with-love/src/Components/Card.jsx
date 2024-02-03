@@ -6,6 +6,7 @@ const Card = ({ id, image, info, price, name, removeTour }) => {
   const description = readmore ? info : `${info.substring(0, 200)}....`;
 
   function readmoreHanlder() {
+    console.log("click hua hn");
     setReadMore(!readmore);
   }
 

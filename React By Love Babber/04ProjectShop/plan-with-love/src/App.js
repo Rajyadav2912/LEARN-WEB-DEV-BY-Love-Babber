@@ -6,7 +6,9 @@ const App = () => {
   const [tours, setTours] = useState(data);
 
   function removeTour(id) {
+    console.log("remove id in app.js : " + id);
     const newTours = tours.filter((tour) => tour.id !== id);
+    console.log("tour id in app.js : " + newTours);
     setTours(newTours);
   }
 
