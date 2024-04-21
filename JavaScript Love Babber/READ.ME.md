@@ -1,6 +1,6 @@
 ## Fundamental of JavaScript
 
-## Array and Object ## async js Coding ## forEach, map, filter, find , indexOf
+## 1. Array and Object 2. async js Coding 3. forEach, map, filter, find , indexOf
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
